@@ -53,32 +53,34 @@ root@8b3202f55036:/# apt-get update
 root@8b3202f55036:/# apt-get install wget
 root@8b3202f55036:/# wget http://data.insideairbnb.com/france/ile-de-france/paris/2023-03-13/data/listings.csv.gz
 root@8b3202f55036:/# wget http://data.insideairbnb.com/france/ile-de-france/paris/2023-03-13/data/reviews.csv.gz
-root@8b3202f55036:/# gzip -d listings.csv.gz reviews.csv.gz 
+root@8b3202f55036:/# wget http://data.insideairbnb.com/france/ile-de-france/paris/2023-03-13/data/calendar.csv.gz
+root@8b3202f55036:/# gzip -d listings.csv.gz reviews.csv.gz calendar.csv.gz
 
 root@8b3202f55036:/# mongoimport --type=csv --headerline --drop --db sample_airbnb --collection listings --file listings.csv
 2023-05-11T12:59:24.854+0000	connected to: mongodb://localhost/
 2023-05-11T12:59:24.855+0000	dropping: sample_airbnb.listings
-2023-05-11T12:59:27.855+0000	[#############...........] sample_airbnb.listings	74.3MB/128MB (58.2%)
-2023-05-11T12:59:30.005+0000	[########################] sample_airbnb.listings	128MB/128MB (100.0%)
+(...)
 2023-05-11T12:59:30.005+0000	56726 document(s) imported successfully. 0 document(s) failed to import.
 
 root@8b3202f55036:/# mongoimport --type=csv --headerline --drop --db sample_airbnb --collection reviews --file reviews.csv
 2023-05-11T12:59:49.143+0000	connected to: mongodb://localhost/
 2023-05-11T12:59:49.143+0000	dropping: sample_airbnb.reviews
-2023-05-11T12:59:52.145+0000	[###.....................] sample_airbnb.reviews	69.3MB/427MB (16.2%)
-2023-05-11T12:59:55.143+0000	[#######.................] sample_airbnb.reviews	134MB/427MB (31.3%)
-2023-05-11T12:59:58.143+0000	[##########..............] sample_airbnb.reviews	191MB/427MB (44.8%)
-2023-05-11T13:00:01.143+0000	[##############..........] sample_airbnb.reviews	250MB/427MB (58.5%)
-2023-05-11T13:00:04.143+0000	[################........] sample_airbnb.reviews	298MB/427MB (69.8%)
-2023-05-11T13:00:07.143+0000	[##################......] sample_airbnb.reviews	338MB/427MB (79.1%)
-2023-05-11T13:00:10.143+0000	[#####################...] sample_airbnb.reviews	378MB/427MB (88.4%)
-2023-05-11T13:00:13.143+0000	[#######################.] sample_airbnb.reviews	423MB/427MB (99.1%)
-2023-05-11T13:00:13.384+0000	[########################] sample_airbnb.reviews	427MB/427MB (100.0%)
+(...)
 2023-05-11T13:00:13.384+0000	1406845 document(s) imported successfully. 0 document(s) failed to import.
+
+root@8b3202f55036:/# mongoimport --type=csv --headerline --drop --db sample_airbnb --collection calendar --file calendar.csv 
+2023-05-11T13:17:13.528+0000	connected to: mongodb://localhost/
+2023-05-11T13:17:13.529+0000	dropping: sample_airbnb.calendar
+(...)
+2023-05-11T13:20:33.205+0000	20703571 document(s) imported successfully. 0 document(s) failed to import.
 
 root@8b3202f55036:/# mongo sample_airbnb --quiet --eval="db.listings.count()"
 56726
 root@8b3202f55036:/# mongo sample_airbnb --quiet --eval="db.reviews.count()"
 1406845
+root@8b3202f55036:/# mongo sample_airbnb --quiet --eval="db.calendar.count()"
+20703571
+
+
 </pre></code>
 

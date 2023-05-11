@@ -6,6 +6,7 @@ Description : Files for workshop SQL vs NoSQL workshop
 - Docker 20.10+
 - Une connexion internet
 - Accès github : https://github.com/Capdata/sqlvsnosql
+- Accès fichiers source AirBnB : http://insideairbnb.com/get-the-data/ 
 
 # 1) Setup MySQL 8 container image 
 ref : https://hub.docker.com/_/mysql

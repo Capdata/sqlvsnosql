@@ -28,7 +28,7 @@ mysql: [Warning] Using a password on the command line interface can be insecure.
 +-----------+
 </pre></code>
 
-# 2) Setup MongoDB container image 
+# 2) Setup MongoDB 4.4 container image 
 ref : https://hub.docker.com/_/mongo
 <pre><code>$ docker run -tid --name mongodevfest mongo:4.4-focal
 8b3202f55036bbb31f4307741f183d429f79d2956865f40df76974621d7ec479

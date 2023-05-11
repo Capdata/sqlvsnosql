@@ -46,7 +46,14 @@ root@8b3202f55036:/# mongo --quiet --eval "db.version()"
 4.4.21
 </pre></code>
 
-# 3) Initialize dataset 
+# 3) Initialize MySQL dataset 
+
+<pre><code>bash-4.4# curl -1 -O http://data.insideairbnb.com/france/ile-de-france/paris/2023-03-13/data/listings.csv.gz
+bash-4.4# curl -1 -O http://data.insideairbnb.com/france/ile-de-france/paris/2023-03-13/data/reviews.csv.gz
+bash-4.4# curl -1 -O http://data.insideairbnb.com/france/ile-de-france/paris/2023-03-13/data/calendars.csv.gz
+</pre></code>
+
+# 4) Initialize MongoDB dataset 
 ref : http://insideairbnb.com/get-the-data/
 
 <pre><code>$ docker exec -it mongodevfest bash

@@ -4,7 +4,7 @@ Description : Files for SQL vs NoSQL workshop
 # Prerequisites :
 - Ubuntu 20.04+ (VirtualBox, Hyper-V, VMPlayer, AWS / Azure / GCP, etc...)
 - Docker 20.10+
-- Une connexion internet
+- Internet connection
 - Access to github : https://github.com/Capdata/sqlvsnosql
 - Access to AirBnB data source files : http://insideairbnb.com/get-the-data/ 
 

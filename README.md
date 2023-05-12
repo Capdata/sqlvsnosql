@@ -1,12 +1,12 @@
 # sqlvsnosql
 Description : Files for SQL vs NoSQL workshop
 
-# Prérequis :
+# Prerequisites :
 - Ubuntu 20.04+ (VirtualBox, Hyper-V, VMPlayer, AWS / Azure / GCP, etc...)
 - Docker 20.10+
 - Une connexion internet
-- Accès github : https://github.com/Capdata/sqlvsnosql
-- Accès fichiers source AirBnB : http://insideairbnb.com/get-the-data/ 
+- Access to github : https://github.com/Capdata/sqlvsnosql
+- Access to AirBnB data source files : http://insideairbnb.com/get-the-data/ 
 
 # 1) Setup MySQL 8 container image 
 ref : https://hub.docker.com/_/mysql

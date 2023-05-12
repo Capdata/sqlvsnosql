@@ -1,5 +1,5 @@
 # sqlvsnosql
-Description : Files for workshop SQL vs NoSQL workshop
+Description : Files for SQL vs NoSQL workshop
 
 # Prérequis :
 - Ubuntu 20.04+ (VirtualBox, Hyper-V, VMPlayer, AWS / Azure / GCP, etc...)
